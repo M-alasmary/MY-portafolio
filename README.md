@@ -1,23 +1,50 @@
-# Mohammed Alasmary portfolio
+# Mohammed Alasmary — portfolio
 
-Dependency-free static portfolio built for accessibility, responsive performance, and evidence-aware technical storytelling.
+Dependency-free static portfolio for Mohammed Alasmary: software engineer working across AI, cyber defense, and autonomous systems.
 
-## Source map
+Live site: https://m-alasmary.github.io/MY-portafolio/ (deployed from `main` by `.github/workflows/pages.yml`)
 
-- Identity, education, experience, professional strengths, credentials, email, and LinkedIn: `CV/Mohammed Alasmary cv(1).pdf` from the supplied complete-assets archive.
-- Defensethon first-place team leadership: current CV. No connection to SkyCrypt is claimed because the supplied project materials do not establish one.
-- SkyCrypt narrative and six capability model: `Skycrypt.pptx`.
-- SkyCrypt dual-platform architecture and 5-/10-inch terminology: `SkyCrypt_Technical_Dossier_Refined.pdf`; these are reference designs, not tested platforms.
-- SkyCrypt cold-chain design targets: `SkyCrypt Drone Report(2).pdf`; targets are not presented as achieved results.
-- SkyCrypt implementation status: `SkyCrypt_AI_Core.zip`, including README, source, and tests. Seven stdlib backend tests were re-run successfully during this build.
-- SkyCrypt imagery: supplied generated brand assets, always labeled as illustration rather than build evidence.
-- ACDS research model: supplied poster PDF/PPTX. Performance figures are treated as research targets, not results.
-- ACDS application implementation and limits: current `https://github.com/M-alasmary/ACDS-Fullstack` source and README.
-- ACDS poster preview: supplied high-resolution PNG, cropped before publication to remove the complete team/student-ID area.
+## What the site presents
 
-## Privacy and integrity
+- **SkyCrypt** — an intelligence platform for aerial missions that Mohammed leads. Covers the six-capability architecture, the dual-platform 5-inch / 10-inch reference design, and the AI Core v0.2: YOLO11 nano detection, ByteTrack tracking, deterministic zone-entry events with CSV export, a Streamlit dashboard with SQLite mission history, validated mission proposals via Ollama (offline) or OpenAI (online), and seven passing backend tests.
+- **ACDS — Autonomous Cyber Defense System** — Mohammed's lead-author research at Al Yamamah University. PPO and DQN agents in CybORG (10 hosts, 3 subnets, 8-feature state, 8-action response space), evaluated against six attack categories plus a concurrent multi-vector case, with evaluation objectives of ≥95% attack detection, ≤10 ms decision latency, and ≤5% false positives. The [ACDS-Fullstack](https://github.com/M-alasmary/ACDS-Fullstack) platform adds Admin / SOC / Research workspaces, secure sessions, role and environment scopes, approval-gated responses, and a hash-chained audit log.
+- **Defensethon 2026** — team leader of the first-place team, integrating Pixhawk, NVIDIA Jetson, Raspberry Pi, and UAV technologies.
+- Experience, coursework, professional strengths, and all seventeen certifications and training programs from the current CV.
 
-- Phone number and student IDs are not exposed in searchable HTML.
-- The downloadable CV is the exact supplied PDF and therefore retains its original contact details.
-- No certificate previews or verification links are shown because none were supplied.
-- No ACDS live deployment or public SkyCrypt repository is claimed.
+Content is owner-confirmed and kept consistent with `dist/documents/mohammed-alasmary-cv.pdf`.
+
+## Structure
+
+```
+dist/
+  index.html        Page structure, content, and inline SVG icon sprite
+  styles.css        Design tokens, layout, responsive breakpoints, reduced-motion rules
+  script.js         Interactions (navigation, filters, explorers, walkthrough, dialogs, command palette)
+  assets/skycrypt/  SkyCrypt brand and concept artwork
+  assets/acds/      ACDS research poster (student-ID area removed)
+  documents/        Downloadable CV
+  favicon.svg, og.svg, robots.txt, sitemap.xml
+.openai/hosting.json  Hosting configuration (serves dist/)
+```
+
+## Interactions
+
+- Project filters, credential search and issuer filters (with live result counts)
+- SkyCrypt perception / mission loop toggle, capability explorer with relationship highlighting, platform selector
+- ACDS decision-loop stepper, role workspaces (ARIA tabs), and a step-by-step incident walkthrough labeled as sample data
+- Keyboard-accessible gallery dialog (arrow keys, previous / next), CV preview dialog with download, and a `Ctrl/⌘ + K` command palette
+
+## Local preview
+
+Serve `dist/` (asset paths are relative, so it works at a domain root or a subpath):
+
+```bash
+python -m http.server 8090 --directory dist
+```
+
+## Privacy
+
+- The phone number and student IDs are not exposed in searchable HTML.
+- The downloadable CV is the original PDF and retains its own contact details.
+- The ACDS poster image keeps the student-ID section removed.
+- SkyCrypt imagery is concept and brand artwork.
