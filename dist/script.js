@@ -464,7 +464,7 @@ function openCv() {
 $$('[data-open-cv]').forEach(button => button.addEventListener('click', openCv));
 function downloadCv() {
   const link = document.createElement('a');
-  link.href = '/documents/mohammed-alasmary-cv.pdf'; link.download = 'Mohammed-Alasmary-CV.pdf';
+  link.href = 'documents/mohammed-alasmary-cv.pdf'; link.download = 'Mohammed-Alasmary-CV.pdf';
   document.body.append(link); link.click(); link.remove();
 }
 

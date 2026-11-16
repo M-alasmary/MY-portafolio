@@ -2,7 +2,7 @@
 
 Dependency-free static portfolio for Mohammed Alasmary: software engineer working across AI, cyber defense, and autonomous systems.
 
-Live site: https://mohammed-alasmary-portfolio.reassuringtoucan1.chatgpt.site/
+Live site: https://m-alasmary.github.io/MY-portafolio/ (deployed from `main` by `.github/workflows/pages.yml`)
 
 ## What the site presents
 
@@ -36,7 +36,7 @@ dist/
 
 ## Local preview
 
-Serve `dist/` from its root (asset paths are root-absolute):
+Serve `dist/` (asset paths are relative, so it works at a domain root or a subpath):
 
 ```bash
 python -m http.server 8090 --directory dist
