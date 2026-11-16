@@ -118,7 +118,7 @@
           <span class="hero-card-go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span>
         </a>
         <a class="hero-card hero-card-acds" href="#acds">
-          <img src="assets/acds/poster-redacted.webp" width="2400" height="1386" alt="" decoding="async">
+          <img src="assets/acds/poster-redacted.webp" width="2800" height="1746" alt="" decoding="async">
           <span class="hero-card-meta"><span class="chip">02 · Cyber defense</span><strong>ACDS</strong><span>PPO / DQN defense agents in CybORG</span></span>
           <span class="hero-card-go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span>
         </a>
@@ -166,7 +166,7 @@
 
         <article class="showcase showcase-acds reveal" data-categories="ai cyber software">
           <a class="showcase-media" href="#acds" tabindex="-1" aria-hidden="true">
-            <img src="assets/acds/poster-redacted.webp" width="2400" height="1386" alt="" loading="lazy" decoding="async">
+            <img src="assets/acds/poster-redacted.webp" width="2800" height="1746" alt="" loading="lazy" decoding="async">
           </a>
           <div class="showcase-body">
             <p class="overline">02 · Autonomous cyber defense · Lead author</p>
@@ -530,22 +530,23 @@
 
       <!-- Evaluation -->
       <div class="acds-results section-shell" id="acds-results">
-        <header class="subhead reveal"><p class="kicker">Controlled CybORG evaluation</p><h3>Methodology and evaluation objectives.</h3></header>
+        <header class="subhead reveal"><p class="kicker">Controlled CybORG evaluation</p><h3>Methodology, objectives &amp; targets.</h3></header>
         <div class="results-layout reveal">
           <ol class="method-list">
-            <li><span>01</span><div><b>Enterprise environment</b><p>10 simulated hosts across 3 subnets.</p></div></li>
+            <li><span>01</span><div><b>Enterprise environment</b><p>10 simulated hosts across 3 subnets (User, Server, DMZ) plus an external attacker network.</p></div></li>
             <li><span>02</span><div><b>Adversarial testing</b><p>6 attack categories plus 1 concurrent multi-vector test.</p></div></li>
-            <li><span>03</span><div><b>Algorithm comparison</b><p>PPO vs DQN under common conditions.</p></div></li>
-            <li><span>04</span><div><b>Reward design</b><p>Penalize false positives and service disruptions.</p></div></li>
+            <li><span>03</span><div><b>Algorithm comparison</b><p>PPO vs DQN head-to-head in identical CybORG simulation: 500k training steps each, paired t-test on 100 evaluation episodes per scenario.</p></div></li>
+            <li><span>04</span><div><b>Multi-term reward</b><p>Rewards detection, containment, and availability; the false-positive penalty (1.5) exceeds the detection reward (1.0) to prevent an over-aggressive “block everything” policy.</p></div></li>
           </ol>
           <div class="objective-grid" aria-label="Evaluation objectives">
             <div><b>≥95%</b><span>Attack detection</span></div>
-            <div><b>≤10 ms</b><span>Decision latency</span></div>
+            <div><b>≤10 ms</b><span>Decision latency (P99)</span></div>
             <div><b>≤5%</b><span>False positives</span></div>
-            <p>Evaluation objectives defined in the ACDS research plan for policy decisions, threat coverage, and service impact.</p>
+            <div><b>≥98%</b><span>Service uptime</span></div>
+            <p>Objectives and targets from the ACDS research poster, alongside AUC-ROC ≥ 0.95 and convergence within 400k steps.</p>
           </div>
-          <button class="poster-card" type="button" data-gallery="acds" data-gallery-src="assets/acds/poster-redacted.webp" data-gallery-alt="ACDS research poster with architecture, methodology, threat scenarios, and evaluation objectives" data-gallery-caption="ACDS research poster — Al Yamamah University">
-            <img src="assets/acds/poster-redacted.webp" width="2400" height="1386" alt="ACDS research poster showing architecture, methodology, threat scenarios, and evaluation objectives" loading="lazy" decoding="async">
+          <button class="poster-card" type="button" data-gallery="acds" data-gallery-src="assets/acds/poster-redacted.webp" data-gallery-alt="ACDS research poster covering the problem, system architecture, decision workflow, PPO vs DQN, reward function, and evaluation metrics" data-gallery-caption="ACDS research poster — Al Yamamah University">
+            <img src="assets/acds/poster-redacted.webp" width="2800" height="1746" alt="ACDS research poster covering the problem, system architecture, decision workflow, PPO vs DQN, reward function, and evaluation metrics" loading="lazy" decoding="async">
             <span>Open research poster <svg class="icon"><use href="#i-expand"/></svg></span>
           </button>
         </div>
