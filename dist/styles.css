@@ -117,7 +117,8 @@ h1{font-size:clamp(3.2rem,7.2vw,7.4rem);line-height:.9;letter-spacing:-.055em;fo
 .hero-card-main{grid-column:1/-1;aspect-ratio:16/9}
 .hero-card-acds{aspect-ratio:4/3.1}
 .hero-card-acds::after{background:linear-gradient(180deg,rgba(8,10,11,.25),rgba(8,10,11,.96) 78%)}
-.hero-card-acds img{object-position:0 0;object-fit:cover;width:180%;height:auto;min-height:100%;max-width:none}
+.hero-card-acds img,.showcase-acds .showcase-media img{object-fit:cover;object-position:50% 0;transform:scale(1.7);transform-origin:50% 0}
+.hero-card.hero-card-acds:hover img,.showcase.showcase-acds:hover .showcase-media img{transform:scale(1.76)}
 .hero-card-stat{aspect-ratio:4/3.1;background:linear-gradient(145deg,#0f1b1b,#0b0e10 60%);flex-direction:column;align-items:flex-start;justify-content:space-between}
 .hero-card-stat::after{display:none}
 .hero-card-stat .icon.big{font-size:2.2rem;color:var(--cyan);margin:1.1rem 0 0 1.1rem;stroke-width:1.4}
@@ -160,7 +161,6 @@ section{position:relative}
 .showcase:hover .showcase-media>img{transform:scale(1.035)}
 .showcase-sky .showcase-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,var(--panel))}
 .showcase-logo{position:absolute!important;left:1.2rem!important;top:1.2rem!important;width:84px!important;height:84px!important;inset:auto!important;border-radius:16px;border:1px solid var(--line2);z-index:1}
-.showcase-acds .showcase-media img{object-position:0 0;object-fit:cover;width:165%;height:auto;max-width:none;min-height:100%}
 .showcase-body{padding:clamp(1.3rem,2.5vw,2.2rem);display:flex;flex-direction:column;gap:1rem;flex:1}
 .showcase-body h3{font-size:clamp(2.2rem,4vw,3.6rem);letter-spacing:-.055em}
 .showcase-body h3 a:hover{color:var(--cyan)}
@@ -431,12 +431,12 @@ section{position:relative}
 .method-list li>span{font-family:var(--mono);font-size:.74rem;color:var(--cyan);padding-top:.2rem}
 .method-list b{font-size:1.02rem}
 .method-list p{color:var(--muted);font-size:.9rem}
-.objective-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem;align-content:start}
+.objective-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem;align-content:start}
 .objective-grid div{border:1px solid rgba(111,247,232,.3);border-radius:var(--radius);background:linear-gradient(180deg,rgba(111,247,232,.08),transparent);padding:1.3rem .9rem;text-align:center;display:flex;flex-direction:column;gap:.35rem;min-width:0}
 .objective-grid b{font-size:clamp(1.5rem,2.8vw,2.3rem);letter-spacing:-.04em;color:var(--cyan);white-space:nowrap}
 .objective-grid span{font-size:.68rem;text-transform:uppercase;letter-spacing:.11em;color:var(--muted);font-weight:700}
 .objective-grid p{grid-column:1/-1;font-size:.82rem;color:var(--faint)}
-.poster-card{grid-column:1/-1;position:relative;padding:0;border:1px solid var(--line2);border-radius:calc(var(--radius) + 4px);overflow:hidden;background:#06090c;aspect-ratio:2400/1386}
+.poster-card{grid-column:1/-1;position:relative;padding:0;border:1px solid var(--line2);border-radius:calc(var(--radius) + 4px);overflow:hidden;background:#06090c;aspect-ratio:2800/1746}
 .poster-card img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
 .poster-card:hover img{transform:scale(1.015)}
 .poster-card>span{position:absolute;right:1rem;bottom:1rem;display:inline-flex;gap:.5rem;align-items:center;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.55rem .85rem;border-radius:999px;background:var(--cyan);color:#041311}
@@ -698,7 +698,7 @@ kbd{font-family:var(--mono);font-size:.66rem;color:var(--faint);border:1px solid
   .visual-header>span:first-child{font-size:.58rem}
   .timeline li{grid-template-columns:46px 18px minmax(0,1fr);gap:.45rem}
   .timeline li:not(:last-child)::after{left:calc(46px + .45rem + 8.5px)}
-  .objective-grid{grid-template-columns:1fr 1fr 1fr;gap:.4rem}
+  .objective-grid{grid-template-columns:1fr 1fr;gap:.4rem}
   .objective-grid div{padding:1rem .4rem}
   .objective-grid b{font-size:1.3rem}
   .objective-grid span{font-size:.56rem;letter-spacing:.06em}
@@ -731,7 +731,6 @@ kbd{font-family:var(--mono);font-size:.66rem;color:var(--faint);border:1px solid
   h1{font-size:2.65rem}
   .hero-actions{grid-template-columns:1fr}
   .arch-node{font-size:.6rem;padding:.38rem .5rem}
-  .objective-grid{grid-template-columns:1fr}
   .threat-grid{grid-template-columns:1fr}
   .role-tab .icon{display:none}
 }
